@@ -47,6 +47,7 @@ module Twilio
         @studio = nil
         @verify = nil
         @voice = nil
+        @insights = nil
       end
 
       ##
@@ -227,6 +228,12 @@ module Twilio
       # Access the Voice Twilio Domain
       def voice
         @voice ||= Voice.new self
+      end
+
+      ##
+      # Access the Insights Twilio Domain
+      def insights
+        @insights ||= Insights.new self
       end
 
       ##
